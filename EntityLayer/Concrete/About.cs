@@ -16,7 +16,7 @@ namespace EntityLayer.Concrete
         [StringLength(150)]
         public string Image { get; set; }
         [StringLength(500)]
-        public string Desc { get; set; }
+        public string Description { get; set; }
         [StringLength(200)]
         public string Map { get; set; }
     }
