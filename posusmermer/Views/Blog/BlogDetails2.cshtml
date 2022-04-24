@@ -1,0 +1,43 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+<section id="page-content" class="sidebar-right">
+    <div class="container">
+        <div class="row">
+            <!-- content -->
+            @foreach (var item in Model)
+            {
+                <div class="content col-lg-9">
+                    <!-- Blog -->
+                    <div id="blog" class="single-post">
+                        <!-- Post single item-->
+                        <div class="post-item">
+                            <div class="post-item-wrap">
+                                <div class="post-image">
+                                    <a href="#">
+                                        <img alt="" src="@item.Image">
+                                    </a>
+                                </div>
+                                <div class="post-item-description">
+                                    <h2>@item.Title</h2>
+                                    <div class="post-meta">
+
+                                        <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
+
+                                    </div>
+                                    <p>@item.Description</p>
+                                </div>
+
+                                <!-- Comments -->
+                            </div>
+                        </div>
+                        <!-- end: Post single item-->
+                    </div>
+
+                </div>}
+            <!-- end: content -->
+            <!-- Sidebar-->
+
+            @Html.Action("BlogPopular", "Blog")
+
+        </div>
+    </div>
+</section>

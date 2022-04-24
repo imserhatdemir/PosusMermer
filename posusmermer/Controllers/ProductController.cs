@@ -15,5 +15,24 @@ namespace posusmermer.Controllers
         {
             return View();
         }
+        public PartialViewResult ProductList()
+        {
+            var productlist = pm.GetAll();
+            return PartialView(productlist);
+        }
+        public PartialViewResult Filter()
+        {
+            return PartialView();
+        }
+        public ActionResult ProductDetails()
+        {
+            return View();
+        }
+        public PartialViewResult ProductDetails2(int id)
+        {
+            var proddetail = pm.GetProductByID(id);
+            return PartialView(proddetail);
+
+        }
     }
 }

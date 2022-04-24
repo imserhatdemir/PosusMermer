@@ -15,6 +15,8 @@ namespace EntityLayer.Concrete
         public string Title { get; set; }
         [StringLength(300)]
         public string Description { get; set; }
+        [StringLength(500)]
+        public string Details { get; set; }
         [StringLength(200)]
         public string Image { get; set; }
         public int CategoryID { get; set; }

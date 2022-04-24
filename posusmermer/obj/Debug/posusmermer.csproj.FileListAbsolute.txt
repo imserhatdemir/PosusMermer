@@ -90,3 +90,7 @@ C:\Users\Serhat Demir\source\repos\posusmermer\obj\Debug\posusmermer.csproj.Core
 C:\Users\Serhat Demir\source\repos\posusmermer\obj\Debug\posusmermer.csproj.CopyComplete
 C:\Users\Serhat Demir\source\repos\posusmermer\obj\Debug\posusmermer.dll
 C:\Users\Serhat Demir\source\repos\posusmermer\obj\Debug\posusmermer.pdb
+C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.dll
+C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.Mvc.dll
+C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.xml
+C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.Mvc.xml

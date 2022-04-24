@@ -15,5 +15,9 @@ namespace BusinessLayer.Concrete
         {
             return repoproduct.List();
         }
+        public List<Product> GetProductByID(int id)
+        {
+            return repoproduct.List().Where(x => x.ProductID == id).ToList();
+        }
     }
 }
