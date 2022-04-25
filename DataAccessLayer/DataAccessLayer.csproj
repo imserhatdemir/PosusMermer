@@ -66,6 +66,10 @@
     <Compile Include="Migrations\202204231510087_detailsproductmig.designer.cs">
       <DependentUpon>202204231510087_detailsproductmig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204251421358_projectaddcolumnsmig.cs" />
+    <Compile Include="Migrations\202204251421358_projectaddcolumnsmig.designer.cs">
+      <DependentUpon>202204251421358_projectaddcolumnsmig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204231510087_detailsproductmig.resx">
       <DependentUpon>202204231510087_detailsproductmig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204251421358_projectaddcolumnsmig.resx">
+      <DependentUpon>202204251421358_projectaddcolumnsmig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

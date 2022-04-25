@@ -31,7 +31,13 @@
 
     <!-- Body Inner -->
     <div class="body-inner">
-
+        <div style="width: 100%;" class="property p-2 bg-primary">
+            <div class="container propertylg d-flex justify-content-end ">
+                <a class="me-4" href="#"><img width="20px" src="https://cdn-icons-png.flaticon.com/512/330/330467.png" alt=""> Türkçe</a>
+                <a class="me-4" href="#"><img width="20px" src="https://cdn-icons-png.flaticon.com/512/330/330425.png" alt=""> English</a>
+                <a href="#"><img width="20px" src="https://cdn-icons-png.flaticon.com/512/330/330552.png" alt=""> عربي</a>
+            </div>
+        </div>
         <!-- Header -->
         <header id="header">
             <div class="header-inner">
@@ -84,7 +90,7 @@
                                     <li><a href="~/Project/Index">Projeler</a></li>
                                     <li><a href="index.html">Katalog</a></li>
                                     <li><a href="index.html">Hakkında</a></li>
-                                    <li><a href="index.html">İletişim</a></li>
+                                    <li><a href="~/Contact/SendMessage">İletişim</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -94,21 +100,15 @@
             </div>
         </header>
         <!-- Swiper -->
-       
-
         <!-- Content -->
-       
-                <!-- end: Page title -->
-                <!-- Blog -->
+        <!-- end: Page title -->
+        <!-- Blog -->
 
-                @RenderBody()
-                <!-- Pagination -->
+        @RenderBody()
+        <!-- Pagination -->
+        <!-- end: Pagination -->
 
 
-                
-                <!-- end: Pagination -->
-
-            
 
     </div>
     <!-- end: Body Inner -->

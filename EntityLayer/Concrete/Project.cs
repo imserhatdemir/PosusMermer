@@ -13,9 +13,13 @@ namespace EntityLayer.Concrete
         public int ProjectID { get; set; }
         [StringLength(100)]
         public string ProjectName { get; set; }
+        [StringLength(500)]
+        public string About1 { get; set; }
+        [StringLength(500)]
+        public string About2 { get; set; }
         [StringLength(300)]
         public string Image { get; set; }
-        [StringLength(300)]
+        [StringLength(800)]
         public string Map { get; set; }
     }
 }
