@@ -18,6 +18,18 @@ namespace EntityLayer.Concrete
         [StringLength(500)]
         public string Description { get; set; }
         [StringLength(200)]
+        public string ShortAbout { get; set; }
+        [StringLength(200)]
+        public string Instagram { get; set; }
+        [StringLength(200)]
+        public string Facebook { get; set; }
+        [StringLength(200)]
+        public string Twitter { get; set; }
+        [StringLength(200)]
+        public string Whatsapp { get; set; }
+        [StringLength(200)]
+        public string Mail { get; set; }
+        [StringLength(500)]
         public string Map { get; set; }
     }
 }

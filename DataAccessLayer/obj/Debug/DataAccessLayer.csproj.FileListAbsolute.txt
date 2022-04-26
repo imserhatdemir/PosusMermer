@@ -18,3 +18,4 @@ C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csp
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addblogtable.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.detailsproductmig.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.projectaddcolumnsmig.resources
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.aboutupdatemig.resources

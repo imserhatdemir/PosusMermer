@@ -20,7 +20,7 @@ namespace posusmermer.Controllers
         }
         public PartialViewResult BlogList(int page=1)
         {
-            var values = bm.GetAll().ToPagedList(page,3);
+            var values = bm.GetAll().ToPagedList(page,6);
             return PartialView(values);
         }
         public PartialViewResult Slider()
