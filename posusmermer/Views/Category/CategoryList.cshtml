@@ -1,0 +1,19 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Category>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-3 col-xs-3">
+            <div class="left-list">
+                <h5 class="mb-2">Kategoriler</h5>
+                @foreach (var item in Model)
+                {
+                <div class="form-check">
+                    <a href="/Category/CategoryByStock/@item.CategoryID">
+                        <label class="form-check-label" for="exampleRadios1">
+                            @item.CategoryName
+                        </label>
+                    </a>
+                </div>
+                }
+            </div>
+        </div>
+

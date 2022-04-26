@@ -19,3 +19,4 @@ C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Mig
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.detailsproductmig.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.projectaddcolumnsmig.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.aboutupdatemig.resources
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addslidertablemig.resources

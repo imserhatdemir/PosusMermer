@@ -58,6 +58,7 @@
     <Compile Include="Concrete\Plates.cs" />
     <Compile Include="Concrete\Product.cs" />
     <Compile Include="Concrete\Project.cs" />
+    <Compile Include="Concrete\Slider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

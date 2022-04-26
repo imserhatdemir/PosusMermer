@@ -18616,76 +18616,7 @@ body.breakpoint-xs .box-fancy [class*="col-"] {
     opacity: 1;
 }
 
-.footer {
-    color: white;
-}
 
-    .footer a {
-        text-decoration: none;
-        color: white;
-    }
-
-.swiper {
-    width: 50%;
-    height: 50%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-
-.sidebar-inner ul li a {
-    text-decoration: none;
-}
-
-.sidebar-inner ul {
-    list-style: none;
-}
-
-.mySwiper2 {
-    height: 70%;
-    width: 70%;
-    margin-bottom: 20px;
-}
-
-.mySwiper {
-    height: 20%;
-    width: 70%;
-    box-sizing: border-box;
-    padding: 10px 0;
-}
-
-    .mySwiper .swiper-slide-thumb-active {
-        opacity: 1;
-    }
-
-.propertylg a {
-    color: white;
-    text-decoration: none;
-}
 
 /*GALLERY*/
 
