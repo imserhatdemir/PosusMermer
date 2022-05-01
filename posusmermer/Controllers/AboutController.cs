@@ -30,6 +30,15 @@ namespace posusmermer.Controllers
             var values = am.GetAll();
             return PartialView(values);
         }
+        public ActionResult AdminAbout()
+        {
+            var values = am.GetAll();
+            return View(values);
+        }
+        public ActionResult AboutUpdate()
+        {
+            return View();
+        }
 
     }
 }

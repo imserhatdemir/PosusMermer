@@ -25,16 +25,10 @@
 
                         </div>
                         <div class="post-item-description">
-                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                            <span class="post-meta-comments">
-                                <a href="">
-                                    <i class="fa fa-comments-o"></i>33
-                                    Comments
-                                </a>
-                            </span>
+                            
                             <h2><a href="#">@item.Title</a></h2>
                             <p>
-                                @item.Description
+                                @item.Description.Substring(0,item.Description.Substring(0,50).LastIndexOf(" "))...
                             </p>
 
                             <a href="~/Blog/BlogDetails/@item.BlogID" class="btn btn-dark text-light">Devamını Oku</a>

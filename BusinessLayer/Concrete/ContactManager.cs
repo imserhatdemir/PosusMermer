@@ -24,5 +24,9 @@ namespace BusinessLayer.Concrete
         {
             return repocontact.List();
         }
+        public List<Contact> GetContactByID(int id)
+        {
+            return repocontact.List().Where(x => x.ContactID == id).ToList();
+        }
     }
 }

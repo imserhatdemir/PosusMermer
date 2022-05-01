@@ -1,0 +1,51 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.Category>
+@{
+    ViewBag.Title = "AdminCategoryList";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>AdminCategoryList</h2>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <a href="/Category/AddCategory" class="btn btn-primary">Kategori EKLE</a>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Başlık</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Başlık</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CategoryID</td>
+                            <td>@item.CategoryName</td>
+                            <td>
+                                <a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger" id="btn1">SİL</a>
+                                <a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-success">GÜNCELLE</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

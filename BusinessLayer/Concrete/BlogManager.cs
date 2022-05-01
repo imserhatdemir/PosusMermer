@@ -20,5 +20,21 @@ namespace BusinessLayer.Concrete
         {
             return repoblog.List().Where(x => x.BlogID == id).ToList();
         }
+
+        public int BlogAddBL(Blog p)
+        {
+
+            if (p.Title == ""  || p.Description == "" ||  p.Description.Length <= 100)
+            {
+                return -1;
+            }
+            return repoblog.Insert(p);
+        }
+        public int DeleteBlogBL(int p)
+        {
+            Blog blog = repoblog.Find(x => x.BlogID == p);
+            return repoblog.Delete(blog);
+        }
+
     }
 }

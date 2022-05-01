@@ -1,8 +1,11 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 using PagedList;
 using PagedList.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +16,7 @@ namespace posusmermer.Controllers
     {
         // GET: Blog
         BlogManager bm = new BlogManager();
+      
         public ActionResult Index()
         {
             
@@ -45,5 +49,42 @@ namespace posusmermer.Controllers
             var values = bm.GetAll().ToPagedList(page, 3);
             return PartialView(values);
         }
+
+        // GET: Admin
+        public ActionResult AdminIndex()
+        {
+            return View();
+        }
+
+        public PartialViewResult AdminBlogList()
+        {
+            var values = bm.GetAll();
+            return PartialView(values);
+        }
+        [HttpGet]
+       public ActionResult AddNewBlog()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddNewBlog(Blog b)
+        {
+            if (Request.Files.Count > 0)
+            {
+                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
+                string uzanti = Path.GetExtension(Request.Files[0].FileName);
+                string yol = "/Images/" + dosyaadi + uzanti;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                b.Image = "/Images/" + dosyaadi + uzanti;
+            }
+            bm.BlogAddBL(b);
+            return RedirectToAction("AdminIndex");
+        }
+        public ActionResult DeleteBlog(int id)
+        {
+            bm.DeleteBlogBL(id);
+            return RedirectToAction("AdminIndex");
+        }
+
     }
 }

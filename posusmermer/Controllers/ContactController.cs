@@ -24,12 +24,21 @@ namespace posusmermer.Controllers
         {
             return View();
         }
-        [AllowAnonymous]
         [HttpPost]
         public ActionResult SendMessage(Contact p)
         {
             cm.BLContactAdd(p);
             return View();
+        }
+        public ActionResult AdminMessage()
+        {
+            var values = cm.GetAll();
+            return View(values);
+        }
+        public ActionResult MessageDetails(int id)
+        {
+            var cd = cm.GetContactByID(id);
+            return View(cd);
         }
     }
 }

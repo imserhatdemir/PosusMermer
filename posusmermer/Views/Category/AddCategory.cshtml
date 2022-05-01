@@ -1,0 +1,14 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>AddCategory</h2>
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary" id="btn1">KAYDET</button>
+}
