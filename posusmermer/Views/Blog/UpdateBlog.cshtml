@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewBag.Title = "UpdateBlog";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>UpdateBlog</h2>
+
+
+<br />
+@using (Html.BeginForm("UpdateBlog", "Blog", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<form class="form-group" method="post">
+    @Html.HiddenFor(x => x.BlogID)
+    <p>Başlık</p>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <p>İçerik</p>
+    @Html.TextAreaFor(x => x.Description, 20, 10, new { @class = "form-control" })
+    <br />
+    <p>Resim</p>
+    <input type="file" name="Image" />
+    <br />
+    <button class="btn btn-info">KAYDET</button>
+</form>}

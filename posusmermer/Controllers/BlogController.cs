@@ -86,5 +86,60 @@ namespace posusmermer.Controllers
             return RedirectToAction("AdminIndex");
         }
 
+        [HttpGet]
+        public ActionResult UpdateBlog(int id)
+        {
+
+            Blog blog = bm.FindBlog(id);
+            return View(blog);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateBlog(Blog x, HttpPostedFileBase Görsel)
+        {
+            Context c = new Context();
+            var gnc = c.blogs.Find(x.BlogID);
+
+            gnc.Title = x.Title;
+
+
+
+            gnc.Description = x.Description;
+
+
+
+
+            if (ModelState.IsValid)
+
+            {
+
+
+
+                if (Görsel != null)
+
+                {
+
+                    string dosyaadi = Path.GetFileName(Görsel.FileName);
+
+
+
+                    string yol = "/Images/" + dosyaadi;
+
+                    Görsel.SaveAs(Server.MapPath(yol));
+
+                    gnc.Image = yol;
+
+                }
+
+            }
+
+
+
+            c.SaveChanges();
+
+            return RedirectToAction("AdminIndex");
+
+        }
+
     }
 }

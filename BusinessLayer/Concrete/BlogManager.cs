@@ -30,10 +30,22 @@ namespace BusinessLayer.Concrete
             }
             return repoblog.Insert(p);
         }
+        public Blog FindBlog(int id)
+        {
+            return repoblog.Find(x => x.BlogID == id);
+        }
         public int DeleteBlogBL(int p)
         {
             Blog blog = repoblog.Find(x => x.BlogID == p);
             return repoblog.Delete(blog);
+        }
+        public int UpdateBlog(Blog p)
+        {
+            Blog blog = repoblog.Find(x => x.BlogID == p.BlogID);
+            blog.Description = p.Description;
+            blog.Title = p.Title;
+            blog.Image = p.Image;
+            return repoblog.Update(blog);
         }
 
     }

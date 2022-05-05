@@ -16,5 +16,24 @@ namespace BusinessLayer.Concrete
         {
             return repoabout.List();
         }
+        public About FindAbout(int id)
+        {
+            return repoabout.Find(x => x.AboutID == id);
+        }
+        public int UpdateAbout(About p)
+        {
+            About blog = repoabout.Find(x => x.AboutID == p.AboutID);
+            blog.Description = p.Description;
+            blog.Title = p.Title;
+            blog.Map = p.Map;
+            blog.Image = p.Image;
+            blog.Facebook = p.Facebook;
+            blog.Twitter = p.Twitter;
+            blog.Whatsapp = p.Whatsapp;
+            blog.ShortAbout = p.ShortAbout;
+            blog.Mail = p.Mail;
+            blog.Instagram = p.Instagram;
+            return repoabout.Update(blog);
+        }
     }
 }
