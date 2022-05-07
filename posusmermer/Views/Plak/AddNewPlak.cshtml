@@ -1,0 +1,22 @@
+﻿
+@model EntityLayer.Concrete.Plates
+@{
+    ViewBag.Title = "AddNewPlak";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>AddNewPlak</h2>
+
+@using (Html.BeginForm("AddNewPlak", "Plak", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Ürün Başlığı")
+    @Html.TextBoxFor(x =>x.PlatesName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama 1")
+    @Html.TextAreaFor(x => x.PlatesAbout, 20, 10, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim")
+    <input type="file" name="Image" />
+    <br />
+    <button class="btn btn-info">KAYDET</button>
+}

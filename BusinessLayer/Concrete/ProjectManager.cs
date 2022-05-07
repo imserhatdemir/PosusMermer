@@ -19,5 +19,32 @@ namespace BusinessLayer.Concrete
         {
             return repoproject.List().Where(x => x.ProjectID == id).ToList();
         }
+        public int AddProject(Project p)
+        {
+
+            if (p.ProjectName == "" || p.About1 == "" || p.About2 == "" || p.Map == "")
+            {
+                return -1;
+            }
+            return repoproject.Insert(p);
+        }
+        public Project FindProject(int id)
+        {
+            return repoproject.Find(x => x.ProjectID == id);
+        }
+        public int DeleteProject(int p)
+        {
+            Project blog = repoproject.Find(x => x.ProjectID == p);
+            return repoproject.Delete(blog);
+        }
+        public int UpdateProject(Project p)
+        {
+            Project blog = repoproject.Find(x => x.ProjectID == p.ProjectID);
+            blog.ProjectName = p.ProjectName;
+            blog.About1 = p.About1;
+            blog.About2 = p.About2;
+            blog.Map = p.Map;
+            return repoproject.Update(blog);
+        }
     }
 }

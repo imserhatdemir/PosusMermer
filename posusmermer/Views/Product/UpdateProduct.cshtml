@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.Product
+@{
+    ViewBag.Title = "UpdateProduct";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>UpdateProduct</h2>
+
+@using (Html.BeginForm("UpdateProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.ProductID)
+    <br />
+    @Html.Label("Ürün Başlığı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.values, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama 1")
+    @Html.TextAreaFor(x => x.Description, 20, 10, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama 2")
+    @Html.TextAreaFor(x => x.Description, 20, 10, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim")
+    <input type="file" name="Image" />
+    <br />
+    <button class="btn btn-info">KAYDET</button>
+}

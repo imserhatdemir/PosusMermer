@@ -1,0 +1,24 @@
+﻿@model EntityLayer.Concrete.Plates
+@{
+    ViewBag.Title = "UpdatePlak";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>UpdatePlak</h2>
+
+<br />
+@using (Html.BeginForm("UpdatePlak", "Plak", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <form class="form-group" method="post">
+        @Html.HiddenFor(x => x.PlatesID)
+        <p>Başlık</p>
+        @Html.TextBoxFor(x => x.PlatesName, new { @class = "form-control" })
+        <br />
+        <p>İçerik</p>
+        @Html.TextAreaFor(x => x.PlatesAbout, 20, 10, new { @class = "form-control" })
+        <br />
+        <p>Resim</p>
+        <input type="file" name="Image" />
+        <br />
+        <button class="btn btn-info">KAYDET</button>
+    </form>}

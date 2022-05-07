@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Concrete.Project
+@{
+    ViewBag.Title = "AddNewProject";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>AddNewProject</h2>
+
+
+@using (Html.BeginForm("AddNewProject", "Project", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Proje Başlığı")
+    @Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama 1")
+    @Html.TextAreaFor(x => x.About1, 20, 10, new { @class = "form-control" })
+    <br />
+    @Html.Label("Detay")
+    @Html.TextAreaFor(x => x.About2, 20, 10, new { @class = "form-control" })
+    <br />
+    @Html.Label("Konum")
+    @Html.TextBoxFor(x => x.Map, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim")
+    <input type="file" name="Image" />
+    <br />
+    <button class="btn btn-info">KAYDET</button>
+}

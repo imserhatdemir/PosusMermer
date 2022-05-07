@@ -77,5 +77,58 @@ namespace posusmermer.Controllers
             pm.AddProduct(b);
             return RedirectToAction("AdminProductList");
         }
+        [HttpGet]
+        public ActionResult UpdateProduct(int id)
+        {
+            Product d = pm.FindProduct(id);
+            Context c = new Context();
+            List<SelectListItem> values = (from x in c.categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryID.ToString()
+                                           }).ToList();
+            ViewBag.values = values;
+            return View(d);
+        }
+        [HttpPost]
+        public ActionResult UpdateProduct(Product x, HttpPostedFileBase Görsel)
+        {
+            Context c = new Context();
+            var gnc = c.products.Find(x.ProductID);
+
+            gnc.Title = x.Title;
+            gnc.Description = x.Description;
+            gnc.CategoryID = x.CategoryID;
+            gnc.Details = x.Details;
+
+            if (ModelState.IsValid)
+
+            {
+
+                if (Görsel != null)
+
+                {
+
+                    string dosyaadi = Path.GetFileName(Görsel.FileName);
+
+
+
+                    string yol = "/Images/" + dosyaadi;
+
+                    Görsel.SaveAs(Server.MapPath(yol));
+
+                    gnc.Image = yol;
+
+                }
+
+            }
+
+
+
+            c.SaveChanges();
+
+            return RedirectToAction("AdminProductList");
+        }
     }
 }

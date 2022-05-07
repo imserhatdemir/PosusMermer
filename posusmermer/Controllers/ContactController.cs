@@ -28,7 +28,7 @@ namespace posusmermer.Controllers
         public ActionResult SendMessage(Contact p)
         {
             cm.BLContactAdd(p);
-            return View();
+            return RedirectToAction("SendMessage");
         }
         public ActionResult AdminMessage()
         {

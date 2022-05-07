@@ -3,7 +3,13 @@
     ViewBag.Title = "SendMessage";
     Layout = "~/Views/Shared/_Header.cshtml";
 }
-
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<link href="~/Content/sweetalert/sweet-alert.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <section id="page-title" data-parallax-image="~/posus/images/parallax/5.jpg">
     <div class="container">
         <div class="page-title">
@@ -18,35 +24,35 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h3 class="text-uppercase">Get In Touch</h3>
-                <p>The most happiest time of the day!. Suspendisse condimentum porttitor cursus. Duis nec nulla turpis. Nulla lacinia laoreet odio, non lacinia nisl malesuada vel. Aenean malesuada fermentum bibendum.</p>
+                <h3 class="text-uppercase">Bizimle İletişime Geçin</h3>
+                <p>Soru, görüş ve önerileriniz için bizimle iletişime geçebilirsiniz.</p>
                 <div class="m-t-30">
                     <form class="widget-contact-form" method="post">
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="name">Name</label>
-                                <input type="text" aria-required="true" name="ContactName" class="form-control required name" placeholder="Enter your Name">
+                                <label for="name">Ad</label>
+                                <input type="text" aria-required="true" id="#Name" name="ContactName" class="form-control required name" placeholder="Enter your Name">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
-                                <input type="email" aria-required="true" name="ContactMail" class="form-control required email" placeholder="Enter your Email">
+                                <input type="email" aria-required="true" id="#Mail" name="ContactMail" class="form-control required email" placeholder="Enter your Email">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12">
-                                <label for="subject">Your Subject</label>
+                                <label for="subject">Konu</label>
                                 <input type="text" name="Title" class="form-control required" placeholder="Subject...">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
+                            <label for="message">Mesaj</label>
                             <textarea name="Message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
                         </div>
 
 
                         <div class="row form-group">
                             <div class="col-md-12">
-                                <button class="btn btn-dark text-light" type="submit" id="btn">Mesaj Gönder</button>
+                                <button class="btn btn-dark text-light" type="submit" id="btn" >Mesaj Gönder</button>
                             </div>
                         </div>
                     </form>
@@ -75,8 +81,9 @@
                 </div>
 
                 <!-- Google map sensor -->
-                <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
-                <div class="map m-t-30" data-map-address="Melburne, Australia" data-map-zoom="10" data-map-icon="/posus/images/markers/marker2.png" data-map-type="ROADMAP"></div>
+                <div class="flicker-img">
+                    <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <!-- Google map sensor -->
 
             </div>
@@ -84,6 +91,7 @@
     </div>
 
 </section>
+
 @Html.Action("Footer", "About")
 
 

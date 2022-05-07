@@ -20,5 +20,30 @@ namespace BusinessLayer.Concrete
         {
             return repoplak.List().Where(x => x.PlatesID == id).ToList();
         }
+        public int AddPlates(Plates p)
+        {
+
+            if (p.PlatesName == "" || p.PlatesAbout == "" )
+            {
+                return -1;
+            }
+            return repoplak.Insert(p);
+        }
+        public Plates FindPlak(int id)
+        {
+            return repoplak.Find(x => x.PlatesID == id);
+        }
+        public int DeletePlates(int p)
+        {
+            Plates blog = repoplak.Find(x => x.PlatesID == p);
+            return repoplak.Delete(blog);
+        }
+        public int UpdatePlak(Plates p)
+        {
+            Plates blog = repoplak.Find(x => x.PlatesID == p.PlatesID);
+            blog.PlatesName = p.PlatesName;
+            blog.PlatesAbout = p.PlatesAbout;
+            return repoplak.Update(blog);
+        }
     }
 }
