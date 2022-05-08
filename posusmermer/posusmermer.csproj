@@ -2520,6 +2520,7 @@
     <Content Include="Views\Project\UpdateProject.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Sweet\Alert.cshtml" />
+    <Content Include="Views\Category\CategoryByStock.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

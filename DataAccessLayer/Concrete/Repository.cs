@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Abstract;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -35,7 +36,7 @@ namespace DataAccessLayer.Concrete
             return c.SaveChanges();
         }
 
-        public List<T> List()
+        public List<T> List(object p)
         {
             return _object.ToList();
         }
@@ -47,6 +48,11 @@ namespace DataAccessLayer.Concrete
         public T Find(Expression<Func<T, bool>> p)
         {
             return _object.FirstOrDefault(p);
+        }
+
+        public List<T> List()
+        {
+            return _object.ToList();
         }
     }
 }

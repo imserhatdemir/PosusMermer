@@ -42,5 +42,9 @@ namespace BusinessLayer.Concrete
             return repocategory.Update(ct);
         }
 
+        public List<Category> GetStockByCategory(int id)
+        {
+            return repocategory.List().Where(x => x.CategoryID == id).ToList();
+        }
     }
 }

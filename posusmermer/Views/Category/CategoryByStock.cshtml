@@ -1,0 +1,48 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Product>
+@{
+    ViewBag.Title = "CategoryByStock";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+
+@Html.Action("CategoryList", "Category")
+<div class="col-sm-8">
+    <div class="row">
+        <h2 class="mt-4" style="text-align: center;">ÜRÜNLER</h2>
+        <p class="mb-4">
+            Doğal taşlar yüzyıllar içerisinde doğada kendiliğinden oluşmuş, mineral açısından zengin
+            oluşumlardır. Doğal taş ocaklarından büyük parçalar halinde kesildikten sonra, mermer işleme
+            fabrikalarında ince levhalar halinde kesilerek cilalama ve eskitme gibi yöntemlerle
+            işlenmektedirler. Farklı tür ve formlarda hizmetinize sunulmaktadır. Mermer, traverten,
+            limra ve oniks gibi farklı türden doğal taşlar mozaik, profil ve fayans gibi farklı
+            formlarla evinizin duvarlarına ve zemilerine uygulanmaktadırlar.
+        </p>
+        @foreach (var item in Model)
+        {
+            <div style="width: 20rem;">
+                <a href="~/Product/ProductDetails/@item.ProductID">
+                    <img src="@item.Image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+                        @*<h5 class="card-title">@item.Category.CategoryName</h5>*@
+                    </div>
+                </a>
+            </div>}
+
+
+    </div>
+    <!-- Pagination -->
+
+
+    <ul class="pagination mt-5">
+        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item active"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+    </ul>
+    <!-- end: Pagination -->
+</div>
+
+@Html.Action("Footer", "About")
