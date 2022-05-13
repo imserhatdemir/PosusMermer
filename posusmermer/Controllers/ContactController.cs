@@ -40,5 +40,10 @@ namespace posusmermer.Controllers
             var cd = cm.GetContactByID(id);
             return View(cd);
         }
+        public ActionResult DeleteContact(int id)
+        {
+            cm.DeleteContact(id);
+            return RedirectToAction("AdminMessage");
+        }
     }
 }

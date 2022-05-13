@@ -14,6 +14,7 @@ namespace posusmermer.Controllers
     {
         // GET: Product
         ProductManager pm = new ProductManager();
+        CategoryManager cm = new CategoryManager();
         public ActionResult Index()
         {
             return View();
@@ -123,12 +124,17 @@ namespace posusmermer.Controllers
                 }
 
             }
-
-
-
             c.SaveChanges();
-
             return RedirectToAction("AdminProductList");
         }
+
+
+        public ActionResult Ctgbystock(int id)
+        {
+            var stocklistbycategory = pm.GetProductByCategory(id);
+            return View(stocklistbycategory);
+        }
+
+
     }
 }

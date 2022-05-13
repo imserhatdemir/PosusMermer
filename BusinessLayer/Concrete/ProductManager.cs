@@ -46,5 +46,12 @@ namespace BusinessLayer.Concrete
             blog.CategoryID = p.CategoryID;
             return repoproduct.Update(blog);
         }
+
+        public List<Product> GetProductByCategory(int id)
+        {
+            return repoproduct.List().Where(x => x.CategoryID == id).ToList();
+        }
+
+
     }
 }

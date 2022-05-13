@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
 
-<h2>AdminMessage</h2>
+<h2>Mesajlar</h2>
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -19,7 +19,6 @@
                         <th>AD</th>
                         <th>MAİL</th>
                         <th>KONU</th>
-                        <th>MESAJ</th>
                         <th>İşlemler</th>
                     </tr>
                 </thead>
@@ -29,7 +28,6 @@
                         <th>AD</th>
                         <th>MAİL</th>
                         <th>KONU</th>
-                        <th>MESAJ</th>
                         <th>İşlemler</th>
                     </tr>
                 </tfoot>
@@ -41,10 +39,9 @@
                             <td>@item.ContactName</td>
                             <td>@item.ContactMail</td>
                             <td>@item.Title</td>
-                            <td>@item.Message</td>
                             <td>
                                 <a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-danger" id="btn1">SİL</a>
-                                <a href="/Contact/MessagdeDetails/@item.ContactID" class="btn btn-success">DETAY</a>
+                                <a href="/Contact/MessageDetails/@item.ContactID" class="btn btn-success">DETAY</a>
                             </td>
                         </tr>
                     }

@@ -27,10 +27,6 @@ namespace posusmermer.Controllers
             var values = bm.GetAll().ToPagedList(page,6);
             return PartialView(values);
         }
-        public PartialViewResult Slider()
-        {
-            return PartialView();
-        }
         public PartialViewResult Subscribe()
         {
             return PartialView();

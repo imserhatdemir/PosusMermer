@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Offer
+@{
+    ViewBag.Title = "AddNewOffer";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+
+<h2>AddNewOffer</h2>
+
+@using (Html.BeginForm("AddNewOffer", "Offer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Ürün Başlığı")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.ProductID, (List<SelectListItem>)ViewBag.values, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Başlığı")
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Başlığı")
+    @Html.TextBoxFor(x => x.No, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Başlığı")
+    @Html.TextBoxFor(x => x.Location, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">KAYDET</button>
+}

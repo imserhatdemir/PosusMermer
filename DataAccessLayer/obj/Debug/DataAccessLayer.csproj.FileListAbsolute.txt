@@ -21,3 +21,4 @@ C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Mig
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.aboutupdatemig.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addslidertablemig.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.createadmintable.resources
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migoffer.resources

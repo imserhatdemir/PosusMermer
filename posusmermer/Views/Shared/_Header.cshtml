@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+
     <link href="/posus/assets/css/style.css" rel="stylesheet">
 
 
@@ -32,7 +33,7 @@
 
     <!-- Body Inner -->
     <div class="body-inner">
-        <div style="width: 100%;" class="property p-2 bg-dark text-light" >
+        <div style="width: 100%;" class="property p-2 bg-dark text-light">
             <div class="container propertylg d-flex justify-content-end ">
                 <a class="me-4" href="#"><img width="20px" src="https://cdn-icons-png.flaticon.com/512/330/330467.png" alt=""> Türkçe</a>
                 <a class="me-4" href="#"><img width="20px" src="https://cdn-icons-png.flaticon.com/512/330/330425.png" alt=""> English</a>
@@ -45,7 +46,7 @@
                 <div class="container">
                     <!--Logo-->
                     <div id="logo">
-                        <a href="index.html" class="logo" data-src-dark="/posus/images/logo-dark.png">
+                        <a href="/Blog/Index" class="logo" data-src-dark="/posus/images/logo-dark.png">
                             <img src="/posus/images/logo.png" alt="Polo Logo">
                         </a>
                     </div>
@@ -67,51 +68,49 @@
                     <!--<div class="header-extras">
                         <ul>
                             <li>-->
-                                <!--search icon-->
-                                <!--<a id="btn-search" href="#"> <i class="icon-search1"></i></a>-->
-                                <!--end: search icon-->
-                            <!--</li>
+                    <!--search icon-->
+                    <!--<a id="btn-search" href="#"> <i class="icon-search1"></i></a>-->
+                    <!--end: search icon-->
+                    <!--</li>
 
-                        </ul>-->
-                    </div>
-                    <!--end: Header Extras-->
-                    <!--Navigation Resposnive Trigger-->
-                    <div id="mainMenu-trigger">
-                        <button class="lines-button x"> <span class="lines"></span> </button>
-                    </div>
-                    <!--end: Navigation Resposnive Trigger-->
-                    <!--Navigation-->
-                    <div id="mainMenu">
-                        <div class="container">
-                            <nav>
-                                <ul>
-                                    <li><a href="~/Blog/Index">Anasayfa</a></li>
-                                    <li><a href="~/Product/Index">Ürünler</a></li>
-                                    <li><a href="~/Plak/Index">Plakalar</a></li>
-                                    <li><a href="~/Project/Index">Projeler</a></li>
-                                    @*<li><a href="index.html">Katalog</a></li>*@
-                                    <li><a href="~/About/Index">Hakkında</a></li>
-                                    <li><a href="~/Contact/SendMessage">İletişim</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <!--END: NAVIGATION-->
+                    </ul>-->
                 </div>
+                <!--end: Header Extras-->
+                <!--Navigation Resposnive Trigger-->
+                <div id="mainMenu-trigger">
+                    <button class="lines-button x"> <span class="lines"></span> </button>
+                </div>
+                <!--end: Navigation Resposnive Trigger-->
+                <!--Navigation-->
+                <div id="mainMenu">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li><a href="~/Blog/Index">Anasayfa</a></li>
+                                <li><a href="~/Product/Index">Ürünler</a></li>
+                                <li><a href="~/Plak/Index">Plakalar</a></li>
+                                <li><a href="~/Project/Index">Projeler</a></li>
+                                @*<li><a href="index.html">Katalog</a></li>*@
+                                <li><a href="~/About/Index">Hakkında</a></li>
+                                <li><a href="~/Contact/SendMessage">İletişim</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!--END: NAVIGATION-->
             </div>
-        </header>
+    </div>
+    </header>
 
-        <!-- Swiper -->
-        <!-- Content -->
-        <!-- end: Page title -->
-        <!-- Blog -->
+    <!-- Swiper -->
+    <!-- Content -->
+    <!-- end: Page title -->
+    <!-- Blog -->
 
-        @RenderBody()
-        <!-- Pagination -->
-        <!-- end: Pagination -->
-
-
-
+    @RenderBody()
+    <!-- Pagination -->
+    <!-- end: Pagination -->
     </div>
     <!-- end: Body Inner -->
     <!-- Scroll top -->
@@ -119,9 +118,10 @@
 
     <!--Abone Ol-->
 
-   
 
 
+
+    @Html.Action("Footer", "About")
 
 
     <!--Plugins-->

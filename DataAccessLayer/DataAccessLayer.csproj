@@ -82,6 +82,10 @@
     <Compile Include="Migrations\202205061329129_createadmintable.designer.cs">
       <DependentUpon>202205061329129_createadmintable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205131352089_migoffer.cs" />
+    <Compile Include="Migrations\202205131352089_migoffer.designer.cs">
+      <DependentUpon>202205131352089_migoffer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -117,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205061329129_createadmintable.resx">
       <DependentUpon>202205061329129_createadmintable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205131352089_migoffer.resx">
+      <DependentUpon>202205131352089_migoffer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

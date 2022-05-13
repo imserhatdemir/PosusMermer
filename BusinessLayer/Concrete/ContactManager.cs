@@ -28,5 +28,10 @@ namespace BusinessLayer.Concrete
         {
             return repocontact.List().Where(x => x.ContactID == id).ToList();
         }
+        public int DeleteContact(int p)
+        {
+            Contact c = repocontact.Find(x => x.ContactID == p);
+            return repocontact.Delete(c);
+        }
     }
 }

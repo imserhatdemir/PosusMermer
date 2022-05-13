@@ -18,5 +18,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Project> projects { get; set; }
         public DbSet<Blog> blogs { get; set; }
         public DbSet<Admin> admins { get; set; }
+        public DbSet<Slider> sliders { get; set; }
+        public DbSet<Offer> offers { get; set; }
     }
 }

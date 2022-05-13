@@ -21,12 +21,6 @@ namespace posusmermer.Controllers
             var values = cm.GetAll();
             return PartialView(values);
         }
-
-        public ActionResult CategoryByStock(int id)
-        {
-            var stocklistbycategory = cm.GetStockByCategory(id);
-            return View(stocklistbycategory);
-        }
         public ActionResult AdminCategoryList()
         {
             var values = cm.GetAll();

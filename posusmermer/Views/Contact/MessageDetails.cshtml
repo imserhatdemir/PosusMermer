@@ -1,8 +1,52 @@
-﻿
+﻿@model IEnumerable<EntityLayer.Concrete.Contact>
 @{
     ViewBag.Title = "MessageDetails";
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
 
-<h2>MessageDetails</h2>
+<h2>Mesaj Detayı</h2>
 
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>AD</th>
+                        <th>MAİL</th>
+                        <th>KONU</th>
+                        <th>MESAJ</th>
+                       
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>AD</th>
+                        <th>MAİL</th>
+                        <th>KONU</th>
+                        <th>MESAJ</th>
+                   
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ContactID</td>
+                            <td>@item.ContactName</td>
+                            <td>@item.ContactMail</td>
+                            <td>@item.Title</td>
+                            <td>@item.Message</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

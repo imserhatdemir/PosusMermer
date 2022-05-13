@@ -13,6 +13,7 @@ namespace EntityLayer.Concrete
         public int ProductID { get; set; }
         [StringLength(150)]
         public string Title { get; set; }
+        public ICollection<Offer> offers { get; set; }
         [StringLength(300)]
         public string Description { get; set; }
         [StringLength(500)]
@@ -21,5 +22,6 @@ namespace EntityLayer.Concrete
         public string Image { get; set; }
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
+
     }
 }

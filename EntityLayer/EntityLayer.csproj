@@ -56,6 +56,7 @@
     <Compile Include="Concrete\Blog.cs" />
     <Compile Include="Concrete\Category.cs" />
     <Compile Include="Concrete\Contact.cs" />
+    <Compile Include="Concrete\Offer.cs" />
     <Compile Include="Concrete\Plates.cs" />
     <Compile Include="Concrete\Product.cs" />
     <Compile Include="Concrete\Project.cs" />
