@@ -36,18 +36,19 @@ namespace posusmermer.Controllers
         }
 
         //admin
+        [Authorize]
         public ActionResult AdminProject()
         {
             var values = pm.GetAll();
             return View(values);
         }
-
+        [Authorize]
         public ActionResult DeleteProject(int id)
         {
             pm.DeleteProject(id);
             return RedirectToAction("AdminProject");
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult AddNewProject()
         {
@@ -67,7 +68,7 @@ namespace posusmermer.Controllers
             pm.AddProject(b);
             return RedirectToAction("AdminProject");
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult UpdateProject(int id)
         {

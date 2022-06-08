@@ -13,15 +13,19 @@ namespace EntityLayer.Concrete
         public int ProductID { get; set; }
         [StringLength(150)]
         public string Title { get; set; }
-        public ICollection<Offer> offers { get; set; }
         [StringLength(300)]
         public string Description { get; set; }
         [StringLength(500)]
         public string Details { get; set; }
         [StringLength(200)]
         public string Image { get; set; }
+        [StringLength(15)]
+        public string Renk { get; set; }
+        [StringLength(100)]
+        public string KullanımAlanı { get; set; }
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
+        public ICollection<Offer> offers { get; set; }
 
     }
 }

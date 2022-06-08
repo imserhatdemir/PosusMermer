@@ -21,11 +21,13 @@ namespace posusmermer.Controllers
             var values = cm.GetAll();
             return PartialView(values);
         }
+        [Authorize]
         public ActionResult AdminCategoryList()
         {
             var values = cm.GetAll();
             return View(values);
         }
+        [Authorize]
         [HttpGet]
         public ActionResult AddCategory()
         {
@@ -42,7 +44,7 @@ namespace posusmermer.Controllers
             cm.DeleteCategory(id);
             return RedirectToAction("AdminCategoryList");
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult UpdateCategory(int id)
         {

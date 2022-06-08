@@ -136,9 +136,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OfferController.cs" />
     <Compile Include="Controllers\PlakController.cs" />
@@ -2528,7 +2530,11 @@
     <Content Include="Views\Slider\Slider.cshtml" />
     <Content Include="Views\Slider\SliderList.cshtml" />
     <Content Include="Views\Slider\AddSlider.cshtml" />
-    <Content Include="Views\Offer\AddNewOffer.cshtml" />
+    <Content Include="Views\About\SiteAbout.cshtml" />
+    <Content Include="Views\Error\Page404.cshtml" />
+    <Content Include="Views\Offer\AdminOfferList.cshtml" />
+    <Content Include="Views\Offer\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

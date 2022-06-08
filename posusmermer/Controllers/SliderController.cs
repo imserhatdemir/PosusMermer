@@ -18,18 +18,19 @@ namespace posusmermer.Controllers
             var values = sm.GetAll();
             return PartialView(values);
         }
-
+        [Authorize]
         public ActionResult SliderList()
         {
             var values = sm.GetAll();
             return View(values);
         }
+        [Authorize]
         public ActionResult DeleteSlider(int id)
         {
             sm.DeleteSlider(id);
             return RedirectToAction("SliderList");
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult AddSlider()
         {

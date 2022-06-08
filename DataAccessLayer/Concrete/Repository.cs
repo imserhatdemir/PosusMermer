@@ -32,6 +32,7 @@ namespace DataAccessLayer.Concrete
 
         public int Insert(T p)
         {
+
             _object.Add(p);
             return c.SaveChanges();
         }

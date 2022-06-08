@@ -9,12 +9,7 @@ C:\Users\Serhat Demir\source\repos\DataAccessLayer\bin\Debug\EntityLayer.dll.con
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\bin\Debug\EntityFramework.xml
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
-C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
-C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.dll
-C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.dbcreate.resources
-C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addblogtable.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.detailsproductmig.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.projectaddcolumnsmig.resources
@@ -22,3 +17,11 @@ C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Mig
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addslidertablemig.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.createadmintable.resources
 C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migoffer.resources
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migabout.resources
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.productmig1.resources
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migup2.resources
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Serhat Demir\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

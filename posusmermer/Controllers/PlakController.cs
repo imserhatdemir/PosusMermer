@@ -35,6 +35,7 @@ namespace posusmermer.Controllers
         }
 
         //admin
+        [Authorize]
         public ActionResult AdminPlakaList()
         {
             var values = pm.GetAll();
@@ -46,7 +47,7 @@ namespace posusmermer.Controllers
             pm.DeletePlates(id);
             return RedirectToAction("AdminPlakaList");
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult AddNewPlak()
         {
@@ -67,7 +68,7 @@ namespace posusmermer.Controllers
             pm.AddPlates(b);
             return RedirectToAction("AdminPlakaList");
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult UpdatePlak(int id)
         {

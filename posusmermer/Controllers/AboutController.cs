@@ -23,6 +23,13 @@ namespace posusmermer.Controllers
             var values = am.GetAll();
             return PartialView(values);
         }
+
+        public PartialViewResult SiteAbout()
+        {
+            var values = am.GetAll();
+            return PartialView(values);
+        }
+
         public PartialViewResult Footer()
         {
             var values = am.GetAll();
@@ -33,11 +40,13 @@ namespace posusmermer.Controllers
             var values = am.GetAll();
             return PartialView(values);
         }
+        [Authorize]
         public ActionResult AdminAbout()
         {
             var values = am.GetAll();
             return View(values);
         }
+        [Authorize]
         [HttpGet]
         public ActionResult UpdateAbout(int id)
         {

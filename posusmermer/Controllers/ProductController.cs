@@ -40,16 +40,19 @@ namespace posusmermer.Controllers
         }
 
         //Admin
+        [Authorize]
         public ActionResult AdminProductList()
         {
             var productlist = pm.GetAll();
             return View(productlist);
         }
+        [Authorize]
         public ActionResult DeleteProduct(int id)
         {
             pm.DeleteProduct(id);
             return RedirectToAction("AdminProductList");
         }
+        [Authorize]
 
         [HttpGet]
         public ActionResult AddNewProduct()
@@ -78,6 +81,7 @@ namespace posusmermer.Controllers
             pm.AddProduct(b);
             return RedirectToAction("AdminProductList");
         }
+        [Authorize]
         [HttpGet]
         public ActionResult UpdateProduct(int id)
         {
@@ -102,6 +106,8 @@ namespace posusmermer.Controllers
             gnc.Description = x.Description;
             gnc.CategoryID = x.CategoryID;
             gnc.Details = x.Details;
+            gnc.Renk = x.Renk;
+            gnc.KullanımAlanı = x.KullanımAlanı;
 
             if (ModelState.IsValid)
 
@@ -137,4 +143,6 @@ namespace posusmermer.Controllers
 
 
     }
+
+
 }

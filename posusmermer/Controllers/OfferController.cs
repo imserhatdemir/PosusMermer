@@ -13,30 +13,37 @@ namespace posusmermer.Controllers
     {
         // GET: Offer
         OfferManager om = new OfferManager();
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         [HttpGet]
-        public ActionResult AddNewOffer()
+        public ActionResult Index()
         {
             Context c = new Context();
-            List<SelectListItem> values = (from x in c.offers.ToList()
+            List<SelectListItem> values = (from x in c.products.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.Product.Title,
+                                               Text = x.Title,
                                                Value = x.ProductID.ToString()
                                            }).ToList();
             ViewBag.values = values;
             return View();
         }
         [HttpPost]
-        public ActionResult AddNewOffer(Offer b)
+        public ActionResult Index(Offer b)
         {
            
             om.OfferAdd(b);
-            return RedirectToAction("/Product/Index");
+            return RedirectToAction("AddNewOffer");
+        }
+       
+        public ActionResult AdminOfferList()
+        {
+            var values = om.GetAll();
+            return View(values);
+        }
+        public ActionResult DeleteOffer(int id)
+        {
+            om.DeleteOffer(id);
+            return RedirectToAction("Index");
         }
     }
 }

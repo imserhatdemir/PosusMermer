@@ -11,11 +11,11 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int BlogID { get; set; }
-        [StringLength(100)]
+        [StringLength(50)]
         public string Title { get; set; }
-        [StringLength(500)]
+        [StringLength(300)]
         public string Description { get; set; }
-        [StringLength(100)]
+        [StringLength(50)]
         public string Image { get; set; }
     }
 }

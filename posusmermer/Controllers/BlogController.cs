@@ -47,16 +47,20 @@ namespace posusmermer.Controllers
         }
 
         // GET: Admin
+        [Authorize]
         public ActionResult AdminIndex()
         {
             return View();
         }
 
+        [Authorize]
         public PartialViewResult AdminBlogList()
         {
             var values = bm.GetAll();
             return PartialView(values);
         }
+
+        [Authorize]
         [HttpGet]
        public ActionResult AddNewBlog()
         {
@@ -76,12 +80,14 @@ namespace posusmermer.Controllers
             bm.BlogAddBL(b);
             return RedirectToAction("AdminIndex");
         }
+
         public ActionResult DeleteBlog(int id)
         {
             bm.DeleteBlogBL(id);
             return RedirectToAction("AdminIndex");
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult UpdateBlog(int id)
         {

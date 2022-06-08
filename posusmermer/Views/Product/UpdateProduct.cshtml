@@ -22,6 +22,12 @@
     @Html.Label("Açıklama 2")
     @Html.TextAreaFor(x => x.Description, 20, 10, new { @class = "form-control" })
     <br />
+    @Html.Label("Renk")
+    @Html.TextBoxFor(x => x.Renk, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanım Alanı")
+    @Html.TextBoxFor(x => x.KullanımAlanı,new { @class = "form-control" })
+    <br />
     @Html.Label("Resim")
     <input type="file" name="Image" />
     <br />

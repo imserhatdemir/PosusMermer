@@ -30,11 +30,13 @@ namespace posusmermer.Controllers
             cm.BLContactAdd(p);
             return RedirectToAction("SendMessage");
         }
+        [Authorize]
         public ActionResult AdminMessage()
         {
             var values = cm.GetAll();
             return View(values);
         }
+        [Authorize]
         public ActionResult MessageDetails(int id)
         {
             var cd = cm.GetContactByID(id);

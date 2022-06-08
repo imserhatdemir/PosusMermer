@@ -18,7 +18,7 @@ namespace BusinessLayer.Concrete
         }
         public int OfferAdd(Offer c)
         {
-            if (c.Name == "" || c.Mail == "" || c.Location == "" || c.No == "")
+            if (c.Name == "" || c.No == "")
             {
                 return -1;
             }

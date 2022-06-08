@@ -44,6 +44,8 @@ namespace BusinessLayer.Concrete
             blog.Title = p.Title;
             blog.Details = p.Details;
             blog.CategoryID = p.CategoryID;
+            blog.Renk = p.Renk;
+            blog.KullanımAlanı = p.KullanımAlanı;
             return repoproduct.Update(blog);
         }
 

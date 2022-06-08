@@ -31,5 +31,7 @@ namespace EntityLayer.Concrete
         public string Mail { get; set; }
         [StringLength(500)]
         public string Map { get; set; }
+        [StringLength(200)]
+        public string Keywords { get; set; }
     }
 }

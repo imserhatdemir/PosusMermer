@@ -44,7 +44,7 @@
             <p>
                 @item.Description
             </p>
-            <button id="teklif" type="button" class="btn btn-dark text-light btn-sm mt-3"><a href="/Product/Offer/@item.ProductID">Teklif İste</a></button>
+            @*<button id="teklif" type="button" class="btn btn-dark text-light btn-sm mt-3"><a href="/Product/Offer/@item.ProductID">Teklif İste</a></button>*@
         </div>
     </div>
     <div class="row mt-5">
@@ -68,8 +68,8 @@
         </tr>
        
             <tr>
-                <td>3</td>
-                <td>2</td>
+                <td>@item.Renk</td>
+                <td>@item.KullanımAlanı</td>
                 <td>@item.Category.CategoryName</td>
                 
 

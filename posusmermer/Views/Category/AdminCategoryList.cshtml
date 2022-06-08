@@ -36,10 +36,28 @@
                             <td>@item.CategoryID</td>
                             <td>@item.CategoryName</td>
                             <td>
-                                <a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger" id="btn1">SİL</a>
+                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">SİL</a>
                                 <a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-success">GÜNCELLE</a>
                             </td>
                         </tr>
+                        <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Silmek İstediğine Emin Misin?</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body"> @item.CategoryName Adlı Kategori Silinecek</div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                        <a class="btn btn-danger" href="/Category/DeleteCategory/@item.CategoryID">Sil</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     }
                 </tbody>
             </table>
