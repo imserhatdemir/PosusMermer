@@ -1,0 +1,50 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+@using PagedList
+@using PagedList.Mvc
+<section id="page-content">
+    <div class="container">
+        <!-- post content -->
+        <!-- Page title -->
+        <div class="page-title">
+            <h1>Bizden Haberler</h1>
+            <div class="breadcrumb float-left">
+                
+            </div>
+        </div>
+        <div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
+
+            <!-- Post item-->
+            @foreach (var item in Model)
+            {
+                <div class="post-item border">
+                    <div class="post-item-wrap">
+                        <div class="post-image">
+                            <a href="#">
+                                <img alt="" src="@item.Image">
+                            </a>
+
+                        </div>
+                        <div class="post-item-description">
+                            
+                            <h2><a href="#">@item.Title</a></h2>
+                            <p>
+                                @item.Description.Substring(0,item.Description.Substring(0,20).LastIndexOf(" "))...
+                            </p>
+
+                            <a href="~/Blog/BlogDetails/@item.BlogID" class="btn btn-dark text-light">Devamını Oku</a>
+
+                        </div>
+                    </div>
+                </div>}
+
+
+
+        </div>
+        <ul class="pagination">
+            <li class="page-item"> @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))</li>
+        </ul>
+    </div>
+    <!-- end: post content -->
+
+</section>
+<!-- end: Content -->

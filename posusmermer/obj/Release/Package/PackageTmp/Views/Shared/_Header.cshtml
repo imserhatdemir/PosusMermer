@@ -1,0 +1,131 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("SiteAbout","About")
+
+<body data-animation-in="fadeIn" data-animation-out="fadeOut" data-icon="2" data-icon-color="#072a16"
+      data-speed-in="1000" data-speed-out="1000">
+
+    <!-- Body Inner -->
+    <div class="body-inner">
+        @*<div style="width: 100%;" class="property p-2 bg-dark text-light">
+            <div class="container propertylg d-flex justify-content-end ">
+                <a class="me-4" href="#"><img width="20px" src="https://cdn-icons-png.flaticon.com/512/330/330467.png" alt=""> Türkçe</a>
+                <a class="me-4" href="#"><img width="20px" src="https://cdn-icons-png.flaticon.com/512/330/330425.png" alt=""> English</a>
+                <a href="#"><img width="20px" src="https://cdn-icons-png.flaticon.com/512/330/330552.png" alt=""> عربي</a>
+            </div>
+        </div>*@
+        <!-- Header -->
+        <header id="header">
+            <div class="header-inner">
+                <div class="container">
+                    <!--Logo-->
+                    <div id="logo">
+                        <a href="/Blog/Index" class="logo" data-src-dark="/posus/images/logo-dark.png">
+                            <img src="/posus/images/logo.png" alt="Polo Logo">
+                        </a>
+                    </div>
+                    <!--End: Logo-->
+                    <!-- Search -->
+                    <div id="search">
+                        <div id="search-logo"><img src="/posus/images/logo.png" alt="Polo Logo"></div>
+                        <button id="btn-search-close" class="btn-search-close" aria-label="Close search form">
+                            <i class="icon-x"></i>
+                        </button>
+                        <form class="search-form" action="search-results-page.html" method="get">
+                            <input class="form-control" name="q" type="search" placeholder="Search..."
+                                   autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
+                        </form>
+                    </div>
+                    <!-- end: search -->
+                    <!--Header Extras-->
+                    <!--<div class="header-extras">
+                        <ul>
+                            <li>-->
+                    <!--search icon-->
+                    <!--<a id="btn-search" href="#"> <i class="icon-search1"></i></a>-->
+                    <!--end: search icon-->
+                    <!--</li>
+
+                    </ul>-->
+                </div>
+                <!--end: Header Extras-->
+                <!--Navigation Resposnive Trigger-->
+                <div id="mainMenu-trigger">
+                    <button class="lines-button x"> <span class="lines"></span> </button>
+                </div>
+                <!--end: Navigation Resposnive Trigger-->
+                <!--Navigation-->
+                <div id="mainMenu">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li><a href="~/Blog/Index">Anasayfa</a></li>
+                                <li><a href="~/Product/Index">Ürünler</a></li>
+                                <li><a href="~/Plak/Index">Plakalar</a></li>
+                                <li><a href="~/Project/Index">Projeler</a></li>
+                                @*<li><a href="index.html">Katalog</a></li>*@
+                                <li><a href="~/About/Index">Hakkında</a></li>
+                                <li><a href="~/Contact/SendMessage">İletişim</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!--END: NAVIGATION-->
+            </div>
+    </div>
+    </header>
+
+    <!-- Swiper -->
+    <!-- Content -->
+    <!-- end: Page title -->
+    <!-- Blog -->
+
+    @RenderBody()
+    <!-- Pagination -->
+    <!-- end: Pagination -->
+    </div>
+    <!-- end: Body Inner -->
+    <!-- Scroll top -->
+    <a id="scrollTop"><i class="icon-chevron-up1"></i><i class="icon-chevron-up1"></i></a>
+
+    <!--Abone Ol-->
+
+
+
+
+    @Html.Action("Footer", "About")
+
+
+    <!--Plugins-->
+    <script src="/posus/js/jquery.js"></script>
+    <script src="/posus/js/plugins.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--Template functions-->
+    <script src="/posus/js/functions.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Contact>
+@{
+    ViewBag.Title = "AdminMessage";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Mesajlar</h2>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>AD</th>
+                        <th>MAİL</th>
+                        <th>KONU</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>AD</th>
+                        <th>MAİL</th>
+                        <th>KONU</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ContactID</td>
+                            <td>@item.ContactName</td>
+                            <td>@item.ContactMail</td>
+                            <td>@item.Title</td>
+                            <td>
+                                <a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">SİL</a>
+                                <a href="/Contact/MessageDetails/@item.ContactID" class="btn btn-success">DETAY</a>
+                            </td>
+                        </tr>
+                        <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Silmek İstediğine Emin Misin?</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body"> @item.Title Adlı Mesaj Silinecek</div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                        <a class="btn btn-danger" href="/Contact/DeleteContact/@item.ContactID">Sil</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

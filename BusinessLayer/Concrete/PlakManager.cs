@@ -43,6 +43,7 @@ namespace BusinessLayer.Concrete
             Plates blog = repoplak.Find(x => x.PlatesID == p.PlatesID);
             blog.PlatesName = p.PlatesName;
             blog.PlatesAbout = p.PlatesAbout;
+            blog.Image = p.Image;
             return repoplak.Update(blog);
         }
     }

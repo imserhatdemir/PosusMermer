@@ -1,0 +1,13 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+
+@Html.Action("Slider", "Slider")
+
+@Html.Action("ShowAbout","About")
+
+@Html.Action("BlogList", "Blog")
+
+@Html.Action("Subscribe", "Blog")

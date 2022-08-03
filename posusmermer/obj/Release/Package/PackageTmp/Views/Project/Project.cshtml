@@ -1,0 +1,34 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Project>
+<div class="container mt-5">
+    <div class="row">
+
+        <div class="col-sm-12">
+            <div class="row">
+                <h2>PROJELER</h2>
+                <p>
+                    Doğal taşlar yüzyıllar içerisinde doğada kendiliğinden oluşmuş, mineral açısından zengin
+                    oluşumlardır. Doğal taş ocaklarından büyük parçalar halinde kesildikten sonra, mermer işleme
+                    fabrikalarında ince levhalar halinde kesilerek cilalama ve eskitme gibi yöntemlerle
+                    işlenmektedirler. Farklı tür ve formlarda hizmetinize sunulmaktadır. Mermer, traverten,
+                    limra ve oniks gibi farklı türden doğal taşlar mozaik, profil ve fayans gibi farklı
+                    formlarla evinizin duvarlarına ve zemilerine uygulanmaktadırlar.
+
+                </p>
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <a href="~/Project/ProjectID/@item.ProjectID">
+                            <img height="90%" src="@item.Image"
+                                 class="w-100 shadow-1-strong rounded mb-5"
+                                 alt="Boat on Calm Water" />
+                            @*<h3>@item.PlatesName</h3>*@
+                        </a>
+
+                    </div>}
+            </div>
+            <!-- Pagination -->
+            <!-- end: Pagination -->
+        </div>
+    </div>
+</div>
+

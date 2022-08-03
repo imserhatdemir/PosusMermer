@@ -1,0 +1,70 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Slider>
+@{
+    ViewBag.Title = "SliderList";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>SliderList</h2>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <a href="/Slider/AddSlider" class="btn btn-primary">Slider Ekle</a>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>Görsel</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>Görsel</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.SliderID</td>
+                            <td>@item.Description1</td>
+                            <td>@item.Description2</td>
+                            <td><img src="@item.Image1" width="100" height="100" class="img-responsive"></img></td>
+                            <td>
+                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">SİL</a>
+                            </td>
+                        </tr>
+                        <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Silmek İstediğine Emin Misin?</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body"> @item.Title1 Adlı Slider Silinecek</div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                        <a class="btn btn-danger" href="/Slider/DeleteSlider/@item.SliderID">Sil</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

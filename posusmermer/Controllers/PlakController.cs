@@ -57,14 +57,7 @@ namespace posusmermer.Controllers
         [HttpPost]
         public ActionResult AddNewPlak(Plates b)
         {
-            if (Request.Files.Count > 0)
-            {
-                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
-                string uzanti = Path.GetExtension(Request.Files[0].FileName);
-                string yol = "/Images/" + dosyaadi + uzanti;
-                Request.Files[0].SaveAs(Server.MapPath(yol));
-                b.Image = "/Images/" + dosyaadi + uzanti;
-            }
+            
             pm.AddPlates(b);
             return RedirectToAction("AdminPlakaList");
         }
@@ -76,39 +69,9 @@ namespace posusmermer.Controllers
             return View(d);
         }
         [HttpPost]
-        public ActionResult UpdatePlak(Plates x, HttpPostedFileBase Görsel)
+        public ActionResult UpdatePlak(Plates x)
         {
-            Context c = new Context();
-            var gnc = c.plates.Find(x.PlatesID);
-
-            gnc.PlatesName = x.PlatesName;
-            gnc.PlatesAbout = x.PlatesAbout;
-
-            if (ModelState.IsValid)
-
-            {
-
-                if (Görsel != null)
-
-                {
-
-                    string dosyaadi = Path.GetFileName(Görsel.FileName);
-
-
-
-                    string yol = "/Images/" + dosyaadi;
-
-                    Görsel.SaveAs(Server.MapPath(yol));
-
-                    gnc.Image = yol;
-
-                }
-
-            }
-
-
-
-            c.SaveChanges();
+            pm.UpdatePlak(x);
 
             return RedirectToAction("AdminPlakaList");
         }

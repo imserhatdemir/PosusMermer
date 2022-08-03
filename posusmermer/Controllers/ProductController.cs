@@ -70,14 +70,6 @@ namespace posusmermer.Controllers
         [HttpPost]
         public ActionResult AddNewProduct(Product b)
         {
-            if (Request.Files.Count > 0)
-            {
-                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
-                string uzanti = Path.GetExtension(Request.Files[0].FileName);
-                string yol = "/Images/" + dosyaadi + uzanti;
-                Request.Files[0].SaveAs(Server.MapPath(yol));
-                b.Image = "/Images/" + dosyaadi + uzanti;
-            }
             pm.AddProduct(b);
             return RedirectToAction("AdminProductList");
         }
@@ -97,40 +89,9 @@ namespace posusmermer.Controllers
             return View(d);
         }
         [HttpPost]
-        public ActionResult UpdateProduct(Product x, HttpPostedFileBase Görsel)
+        public ActionResult UpdateProduct(Product x)
         {
-            Context c = new Context();
-            var gnc = c.products.Find(x.ProductID);
-
-            gnc.Title = x.Title;
-            gnc.Description = x.Description;
-            gnc.CategoryID = x.CategoryID;
-            gnc.Details = x.Details;
-            gnc.Renk = x.Renk;
-            gnc.KullanımAlanı = x.KullanımAlanı;
-
-            if (ModelState.IsValid)
-
-            {
-
-                if (Görsel != null)
-
-                {
-
-                    string dosyaadi = Path.GetFileName(Görsel.FileName);
-
-
-
-                    string yol = "/Images/" + dosyaadi;
-
-                    Görsel.SaveAs(Server.MapPath(yol));
-
-                    gnc.Image = yol;
-
-                }
-
-            }
-            c.SaveChanges();
+            pm.UpdateBlog(x);
             return RedirectToAction("AdminProductList");
         }
 

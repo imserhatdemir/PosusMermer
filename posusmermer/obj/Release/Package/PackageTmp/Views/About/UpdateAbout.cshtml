@@ -1,0 +1,46 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Güncelle</h2>
+
+
+<br />
+@using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<form class="form-group" method="post">
+    @Html.HiddenFor(x => x.AboutID)
+    <p>Başlık</p>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <p>Kısa Yazı</p>
+    @Html.TextBoxFor(x => x.ShortAbout, new { @class = "form-control" })
+    <br />
+    <p>İçerik</p>
+    @Html.TextAreaFor(x => x.Description, 20, 10, new { @class = "form-control" })
+    <br />
+    <p>Instagram</p>
+    @Html.TextBoxFor(x => x.Instagram, new { @class = "form-control" })
+    <br />
+    <p>Facebook</p>
+    @Html.TextBoxFor(x => x.Facebook, new { @class = "form-control" })
+    <br />
+    <p>Twitter</p>
+    @Html.TextBoxFor(x => x.Twitter, new { @class = "form-control" })
+    <br />
+    <p>Mail</p>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <p>Konum</p>
+    @Html.TextBoxFor(x => x.Map, new { @class = "form-control" })
+    <br />
+    <p>Site Keywords</p>
+    @Html.TextBoxFor(x => x.Keywords, new { @class = "form-control" })
+    <br />
+    <p>Resim</p>
+    <input type="file" name="Image" />
+    <br />
+    <button class="btn btn-info">KAYDET</button>
+</form>}

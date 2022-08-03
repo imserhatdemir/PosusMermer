@@ -44,6 +44,7 @@ namespace BusinessLayer.Concrete
             blog.About1 = p.About1;
             blog.About2 = p.About2;
             blog.Map = p.Map;
+            blog.Image = p.Image;
             return repoproject.Update(blog);
         }
     }

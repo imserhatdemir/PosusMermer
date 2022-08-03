@@ -24,7 +24,7 @@ namespace BusinessLayer.Concrete
         public int BlogAddBL(Blog p)
         {
 
-            if (p.Title == ""  || p.Description == "" ||  p.Description.Length <= 100)
+            if (p.Title == ""  || p.Description == "")
             {
                 return -1;
             }

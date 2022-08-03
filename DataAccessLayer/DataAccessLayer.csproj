@@ -98,6 +98,14 @@
     <Compile Include="Migrations\202205191051453_migup2.designer.cs">
       <DependentUpon>202205191051453_migup2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208022056355_newmig1.cs" />
+    <Compile Include="Migrations\202208022056355_newmig1.designer.cs">
+      <DependentUpon>202208022056355_newmig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208022059183_newmig2.cs" />
+    <Compile Include="Migrations\202208022059183_newmig2.designer.cs">
+      <DependentUpon>202208022059183_newmig2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -145,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205191051453_migup2.resx">
       <DependentUpon>202205191051453_migup2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208022056355_newmig1.resx">
+      <DependentUpon>202208022056355_newmig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208022059183_newmig2.resx">
+      <DependentUpon>202208022059183_newmig2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

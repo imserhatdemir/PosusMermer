@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props" Condition="Exists('packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
@@ -142,7 +143,6 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\OfferController.cs" />
     <Compile Include="Controllers\PlakController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
@@ -1862,7 +1862,7 @@
     <Content Include="Content\sweetalert\docs.css" />
     <Content Include="Content\sweetalert\sweet-alert.css" />
     <Content Include="Content\sweetalert\thumbs-up.jpg" />
-    <Content Include="favicon.ico" />
+    <Content Include="Images\favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -1976,8 +1976,6 @@
     <Content Include="posus\css\responsive.css" />
     <Content Include="posus\css\rtl.css" />
     <Content Include="posus\css\style.css" />
-    <Content Include="posus\iletisim.html" />
-    <Content Include="posus\images\1.jpg" />
     <Content Include="posus\images\10.jpg" />
     <Content Include="posus\images\12.jpg" />
     <Content Include="posus\images\close.png" />
@@ -2053,17 +2051,10 @@
     <Content Include="posus\js\plugins\js\jquery.rangeslider.js" />
     <Content Include="posus\js\plugins\js\jquery.swiper.js" />
     <Content Include="posus\scss\customization\fonts.css" />
-    <Content Include="posus\src\slide-carrara.jpg" />
-    <Content Include="posus\src\slide-ivory.jpg" />
-    <Content Include="posus\src\slide-patlatma.jpg" />
-    <Content Include="posus\src\slide-tundra-darkj.jpg" />
-    <Content Include="posus\urundetay.html" />
-    <Content Include="posus\urunler.html" />
     <Content Include="posus\webfonts\fa-brands-400.svg" />
     <Content Include="posus\webfonts\fa-regular-400.svg" />
     <Content Include="posus\webfonts\fa-solid-900.svg" />
     <Content Include="posus\webfonts\inspiro-icons.svg" />
-    <Content Include="posus\yazidetay.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="posus\css\style.css.map" />
@@ -2532,13 +2523,10 @@
     <Content Include="Views\Slider\AddSlider.cshtml" />
     <Content Include="Views\About\SiteAbout.cshtml" />
     <Content Include="Views\Error\Page404.cshtml" />
-    <Content Include="Views\Offer\AdminOfferList.cshtml" />
-    <Content Include="Views\Offer\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -2607,6 +2595,7 @@
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props'))" />
   </Target>
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

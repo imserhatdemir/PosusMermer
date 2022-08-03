@@ -56,7 +56,6 @@
     <Compile Include="Concrete\BlogManager.cs" />
     <Compile Include="Concrete\CategoryManager.cs" />
     <Compile Include="Concrete\ContactManager.cs" />
-    <Compile Include="Concrete\OfferManager.cs" />
     <Compile Include="Concrete\PlakManager.cs" />
     <Compile Include="Concrete\ProductManager.cs" />
     <Compile Include="Concrete\ProjectManager.cs" />

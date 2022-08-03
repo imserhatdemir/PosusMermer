@@ -1,0 +1,69 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.Category>
+@{
+    ViewBag.Title = "AdminCategoryList";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Kategoriler</h2>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <a href="/Category/AddCategory" class="btn btn-primary">Kategori EKLE</a>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Başlık</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Başlık</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CategoryID</td>
+                            <td>@item.CategoryName</td>
+                            <td>
+                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">SİL</a>
+                                <a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-success">GÜNCELLE</a>
+                            </td>
+                        </tr>
+                        <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Silmek İstediğine Emin Misin?</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body"> @item.CategoryName Adlı Kategori Silinecek</div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                        <a class="btn btn-danger" href="/Category/DeleteCategory/@item.CategoryID">Sil</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

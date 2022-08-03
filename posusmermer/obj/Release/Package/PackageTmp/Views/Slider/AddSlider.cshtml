@@ -1,0 +1,22 @@
+﻿@model EntityLayer.Concrete.Slider
+@{
+    ViewBag.Title = "AddSlider";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Slider Ekle</h2>
+
+@using (Html.BeginForm("AddSlider", "Slider", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Description1, new { @class = "form-control" })
+    <br />
+    @Html.Label("İçerik")
+
+    @Html.TextBoxFor(x => x.Description2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim Seçin (Seçeceğiniz resim maksimum 1MB büyüklüğünde olmalı)")
+    <input type="file" name="Image" />
+    <br />
+    <button class="btn btn-primary" id="btn1">KAYDET</button>
+}

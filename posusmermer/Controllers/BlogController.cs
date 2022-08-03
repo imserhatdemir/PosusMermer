@@ -69,14 +69,7 @@ namespace posusmermer.Controllers
         [HttpPost]
         public ActionResult AddNewBlog(Blog b)
         {
-            if (Request.Files.Count > 0)
-            {
-                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
-                string uzanti = Path.GetExtension(Request.Files[0].FileName);
-                string yol = "/Images/" + dosyaadi + uzanti;
-                Request.Files[0].SaveAs(Server.MapPath(yol));
-                b.Image = "/Images/" + dosyaadi + uzanti;
-            }
+           
             bm.BlogAddBL(b);
             return RedirectToAction("AdminIndex");
         }
@@ -97,47 +90,9 @@ namespace posusmermer.Controllers
         }
 
         [HttpPost]
-        public ActionResult UpdateBlog(Blog x, HttpPostedFileBase Görsel)
+        public ActionResult UpdateBlog(Blog x)
         {
-            Context c = new Context();
-            var gnc = c.blogs.Find(x.BlogID);
-
-            gnc.Title = x.Title;
-
-
-
-            gnc.Description = x.Description;
-
-
-
-
-            if (ModelState.IsValid)
-
-            {
-
-
-
-                if (Görsel != null)
-
-                {
-
-                    string dosyaadi = Path.GetFileName(Görsel.FileName);
-
-
-
-                    string yol = "/Images/" + dosyaadi;
-
-                    Görsel.SaveAs(Server.MapPath(yol));
-
-                    gnc.Image = yol;
-
-                }
-
-            }
-
-
-
-            c.SaveChanges();
+            bm.UpdateBlog(x);
 
             return RedirectToAction("AdminIndex");
 

@@ -57,14 +57,7 @@ namespace posusmermer.Controllers
         [HttpPost]
         public ActionResult AddNewProject(Project b)
         {
-            if (Request.Files.Count > 0)
-            {
-                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
-                string uzanti = Path.GetExtension(Request.Files[0].FileName);
-                string yol = "/Images/" + dosyaadi + uzanti;
-                Request.Files[0].SaveAs(Server.MapPath(yol));
-                b.Image = "/Images/" + dosyaadi + uzanti;
-            }
+           
             pm.AddProject(b);
             return RedirectToAction("AdminProject");
         }
@@ -76,42 +69,9 @@ namespace posusmermer.Controllers
             return View(d);
         }
         [HttpPost]
-        public ActionResult UpdateProject(Project x, HttpPostedFileBase Görsel)
+        public ActionResult UpdateProject(Project x)
         {
-            Context c = new Context();
-            var gnc = c.projects.Find(x.ProjectID);
-
-            gnc.ProjectName = x.ProjectName;
-            gnc.About1 = x.About1;
-            gnc.About2 = x.About2;
-            gnc.Map = x.Map;
-
-            if (ModelState.IsValid)
-
-            {
-
-                if (Görsel != null)
-
-                {
-
-                    string dosyaadi = Path.GetFileName(Görsel.FileName);
-
-
-
-                    string yol = "/Images/" + dosyaadi;
-
-                    Görsel.SaveAs(Server.MapPath(yol));
-
-                    gnc.Image = yol;
-
-                }
-
-            }
-
-
-
-            c.SaveChanges();
-
+            pm.UpdateProject(x);
             return RedirectToAction("AdminProject");
         }
     }

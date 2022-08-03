@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Serhat Demir\Desktop\publishposus</_PublishTargetUrl>
+    <History>True|2022-06-21T15:04:03.0141610Z;False|2022-06-21T18:03:25.9906015+03:00;False|2022-06-21T18:02:40.2303758+03:00;False|2022-06-21T17:35:08.4791671+03:00;False|2022-06-20T17:55:41.9897041+03:00;False|2022-06-20T17:32:03.6641466+03:00;False|2022-06-20T17:28:23.5816119+03:00;</History>
+  </PropertyGroup>
+</Project>

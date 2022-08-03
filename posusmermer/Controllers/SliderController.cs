@@ -42,10 +42,9 @@ namespace posusmermer.Controllers
             if (Request.Files.Count > 0)
             {
                 string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
-                string uzanti = Path.GetExtension(Request.Files[0].FileName);
-                string yol = "/Images/" + dosyaadi + uzanti;
+                string yol = "/Images/" + dosyaadi ;
                 Request.Files[0].SaveAs(Server.MapPath(yol));
-                b.Image1 = "/Images/" + dosyaadi + uzanti;
+                b.Image1 = "/Images/" + dosyaadi;
             }
             sm.SliderAdd(b);
             return RedirectToAction("SliderList");

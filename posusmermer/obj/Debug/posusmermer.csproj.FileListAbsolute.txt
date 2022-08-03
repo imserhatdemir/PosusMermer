@@ -59,6 +59,8 @@ C:\Users\Serhat Demir\source\repos\posusmermer\bin\EntityLayer.dll
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\Newtonsoft.Json.dll
+C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.dll
+C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.Mvc.dll
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\System.Web.Helpers.dll
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\System.Web.Mvc.dll
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\System.Web.Optimization.dll
@@ -75,6 +77,8 @@ C:\Users\Serhat Demir\source\repos\posusmermer\bin\EntityLayer.pdb
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\EntityLayer.dll.config
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\EntityFramework.xml
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\EntityFramework.SqlServer.xml
+C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.xml
+C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.Mvc.xml
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\System.Web.Helpers.xml
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\System.Web.Mvc.xml
 C:\Users\Serhat Demir\source\repos\posusmermer\bin\System.Web.Optimization.xml
@@ -90,7 +94,3 @@ C:\Users\Serhat Demir\source\repos\posusmermer\obj\Debug\posusmermer.csproj.Core
 C:\Users\Serhat Demir\source\repos\posusmermer\obj\Debug\posusmermer.csproj.CopyComplete
 C:\Users\Serhat Demir\source\repos\posusmermer\obj\Debug\posusmermer.dll
 C:\Users\Serhat Demir\source\repos\posusmermer\obj\Debug\posusmermer.pdb
-C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.dll
-C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.Mvc.dll
-C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.xml
-C:\Users\Serhat Demir\source\repos\posusmermer\bin\PagedList.Mvc.xml
